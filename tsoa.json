@@ -1,0 +1,75 @@
+{
+  "entryFile": "src/app.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "spec": {
+    "version": "1.0.1",
+    "outputDirectory": ".",
+    "specVersion": 3,
+    "securityDefinitions": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "name": "Profile_id",
+        "in": "header"
+      }
+    },
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "tags": [
+      {
+        "name": "Contracts",
+        "description": "Contract operations"
+      },
+      {
+        "name": "Jobs",
+        "description": "Jobs operations"
+      },
+      {
+        "name": "Balances",
+        "description": "Balance operations"
+      }
+    ],
+    "schemes": [
+      "http",
+      "https"
+    ],
+    "spec": {
+      "info": {
+        "title": "Deel Technincal Test",
+        "description": "Deel Technincal Test",
+        "termsOfService": "",
+        "contact": {
+          "name": "Sofwan Lawal",
+          "url": "https://sofwancoder.com",
+          "email": "hi@email.com"
+        }
+      },
+      "servers": [
+        {
+          "url": "{protocol}://{host}:{port}{basePath}",
+          "variables": {
+            "port": {
+              "default": "3001"
+            },
+            "host": {
+              "default": "localhost"
+            },
+            "protocol": {
+              "default": "http",
+              "enum": [
+                "http",
+                "https"
+              ]
+            },
+            "basePath": {
+              "default": "/"
+            }
+          }
+        }
+      ]
+    },
+    "specMerging": "recursive"
+  }
+}
